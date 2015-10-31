@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Got by chemzqm</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Got</h1>
+        <h2>simple request utility</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/chemzqm/got/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/chemzqm/got/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/chemzqm/got" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="got" class="anchor" href="#got" aria-hidden="true"><span class="octicon octicon-link"></span></a>got</h1>
+
+<p>simple xhr utility.</p>
+
+<p>no event supported.</p>
+
+<p>no binary supported.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Install with <a href="http://component.io">component(1)</a>:</p>
+
+<pre><code>$ component install chemzqm/got
+</code></pre>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
+
+<h3>
+<a id="goturl-option-callback" class="anchor" href="#goturl-option-callback" aria-hidden="true"><span class="octicon octicon-link"></span></a>got(url, [option], callback)</h3>
+
+<ul>
+<li><p><code>url</code> is the url to request</p></li>
+<li>
+<p>optional <code>option</code> could contains:</p>
+
+<ul>
+<li>
+<code>method</code> get, post, delete, head, <code>get</code> by default</li>
+<li>
+<code>query</code> query string or query object serialized by <code>encodeURIComponent</code>
+</li>
+<li>
+<code>body</code> request body send to the server side, by default encoded by <code>encodeURIComponent</code>
+</li>
+<li>
+<code>type</code> request body type, could be <code>json</code> and <code>form</code>, <code>form</code> by default</li>
+<li>
+<code>headers</code> headers to be sent</li>
+<li>
+<code>timeout</code> request timeout in millisecond, <code>10s</code> by default</li>
+</ul>
+</li>
+<li>
+<p>callback function takes two arguments</p>
+
+<ul>
+<li>
+<code>err</code> is error object could be <code>network error</code>, <code>crossDomain error</code> or <code>timeout error</code>.</li>
+<li>
+<code>res</code> is the response object has <code>res.text</code> for plain response text, <code>res.status</code> for status code, <code>res.body</code> for parsed response body if response content type is json, <code>res.ok</code> is true if <code>status==2xx</code>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
